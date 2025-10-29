@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Juguetes y Coleccionables — Tienda 3D</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="decorativos.css"> <!-- reutilizamos el CSS del catálogo -->
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;position:relative;">
+      <!-- Lado izquierdo -->
+      <div style="display:flex;align-items:center;gap:12px;position:relative;">
+        <a class="btn" href="index.html">Inicio</a>
+        <div style="font-weight:700;color:var(--accent)">Tienda3D</div>
+        <button class="btn" onclick="toggleCategorias()">Categorías</button>
+        <div id="menu-categorias" class="dropdown">
+          <a href="decorativos.html">Decorativos</a>
+          <a href="Servicios.html">Servicios</a>
+          <a href="juguetes.html">Juguetes y coleccionables</a>
+        </div>
+      </div>
+
+      <!-- Centro: búsqueda -->
+      <div style="flex:1;display:flex;justify-content:center;">
+        <form action="buscar.html" method="get" style="display:flex;max-width:400px;width:100%;">
+          <input type="text" name="q" placeholder="Buscar productos..." style="flex:1;padding:8px;border-radius:8px 0 0 8px;border:1px solid #ccc;">
+          <button type="submit" class="btn" style="border-radius:0 8px 8px 0;">🔍</button>
+        </form>
+      </div>
+
+      <!-- Lado derecho -->
+      <nav>
+        <a class="btn" href="productos.html">Productos</a>
+        <a class="btn" href="tienda.html">Tienda</a>
+        <a class="btn" href="afiliados.html">Afiliados</a>
+        <a class="btn" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Juguetes y Coleccionables</h1>
+        <p>Explora nuestra colección de juguetes y coleccionables impresos en 3D.</p>
+
+        <!-- Galería tipo catálogo -->
+        <div class="catalogo">
+          <div class="catalogo-item">
+            <img src="../Impresion/Images/Juguete 1.webp" alt="Figura">
+            <h3>Juguetes</h3>
+            <p>Diviértete con nuestros modelos.</p>
+            <button onclick="openModal('modal1')">Ver más</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal para juguetes -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Juguetes</h2>
+      <div class="modal-imagenes">
+        <div class="img-box">
+          <img src="../Impresion/Images/Juguete 1.webp" alt="Figura decorativa variante">
+          <p>Figura 1</p>
+        </div>
+        <div class="img-box">
+          <img src="../Impresion/Images/Juguete 2.jpg" alt="Figura decorativa variante">
+          <p>Figura 2</p>
+        </div>
+        <div class="img-box">
+          <img src="../Impresion/Images/Juguete 3.webp" alt="Figura decorativa variante">
+          <p>Figura 3</p>
+        </div>
+      </div>
+      <p>Ideales para colecciones modernas.</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.addEventListener("click", function(e) {
+      document.querySelectorAll(".modal").forEach(modal => {
+        if (e.target === modal) modal.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>
