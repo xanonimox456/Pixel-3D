@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="decorativos.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tienda 3D — Impresiones y Afiliados</title>
+</head>
+<body>
+  <header>
+  <div class="container header-flex">
+    <div class="logo-area">
+      <a class="btn" href="index.html">Inicio</a>
+      <div class="titulo">PIXEL3D</div>
+      <button class="btn categorias-btn" onclick="toggleCategorias()">Categorías</button>
+
+      <div id="menu-categorias" class="menu-categorias">
+        <a href="Accesorios.html">Accesorios</a>
+        <a href="Servicios.html">Servicios</a>
+      </div>
+    </div>
+
+    <div class="buscador">
+      <form id="form-busqueda" onsubmit="return false;">
+        <input type="text" id="busquedaInput" placeholder="Buscar productos..." />
+        <button type="button" id="boton-buscar" class="btn">🔍</button>
+      </form>
+    </div>
+
+      <a class="btn" href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section id="inicio" class="section">
+      <div class="container">
+        <h1>¡Hola! 😊 Que tengas un día lindo. ¿Qué andas buscando hoy?</h1>
+        <p>¡Descubre nuestros productos más recientes en nuestra sección de categoria, no te los pierdas!</p>
+        <p>Para una mejor experiencia voltea el movil😙.</p>
+
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+  <script>
+function filtrarProductos() {
+  const filtro = document.getElementById("busquedaInput").value.toLowerCase().trim();
+  const items = document.querySelectorAll(".catalogo-item");
+
+  items.forEach(item => {
+    const nombre = item.querySelector("h3").textContent.toLowerCase();
+    const categoria = item.dataset.categoria?.toLowerCase() || "";
+    const descripcion = item.textContent.toLowerCase();
+
+    if (nombre.includes(filtro) || categoria.includes(filtro) || descripcion.includes(filtro)) {
+      item.style.display = "block";
+      item.style.animation = "aparecer 0.3s ease";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+
+// Cuando se escribe en la barra
+document.getElementById("busquedaInput").addEventListener("keyup", filtrarProductos);
+
+// Cuando se presiona el botón 🔍
+const botonBusqueda = document.querySelector("#boton-buscar");
+if (botonBusqueda) botonBusqueda.addEventListener("click", filtrarProductos);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Accesorios — Tienda 3D</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="decorativos.css">
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;position:relative;">
+      <div style="display:flex;align-items:center;gap:12px;position:relative;">
+        <a class="btn" href="index.html">Inicio</a>
+        <div style="font-weight:700;color:var(--accent)">Tienda3D</div>
+        <button class="btn" onclick="toggleCategorias()">Categorías</button>
+        <div id="menu-categorias" class="menu-categorias">
+          <a href="Accesorios.html">Accesorios</a>
+          <a href="Servicios.html">Servicios</a>
+        </div>
+      </div>
+
+      <div style="flex:1;display:flex;justify-content:center;">
+        <form action="buscar.html" method="get" style="display:flex;max-width:400px;width:100%;">
+          <input type="text" name="q" placeholder="Buscar productos..."
+                 style="flex:1;padding:8px;border-radius:8px 0 0 8px;border:1px solid #ccc;">
+          <button type="submit" class="btn" style="border-radius:0 8px 8px 0;">🔍</button>
+        </form>
+      </div>
+
+      <nav>
+        <a class="btn" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Accesorios</h1>
+        <p>Explora nuestra colección de artículos decorativos impresos en 3D. ¡Perfectos para dar un toque único a tu espacio!</p>
+
+        <div class="catalogo">
+          <div class="catalogo-item">
+            <img src="../Impresion/Images/guardian dragon decoracion estante.webp" alt="Decoración moderna">
+            <h3>Decorativos</h3>
+            <p>Variedad de articulos.</p>
+            <button onclick="openModal('modal1')">Ver más</button>
+          </div>
+
+           <div class="catalogo-item">
+            <img src="../Impresion/Images/Maceta mano.webp" alt="Figura">
+            <h3>Macetas excepcionales</h3>
+            <p>Modelos Variantes.</p>
+            <button onclick="openModal('modal2')">Ver más</button>
+          </div>
+
+          <div class="catalogo-item">
+            <img src="../Impresion/Images/Dragon lampara 2.webp" alt="Decoración moderna">
+            <h3>Lamparas</h3>
+            <p>Iluminación</p>
+            <button onclick="openModal('modal3')">Ver más</button>
+          </div>
+
+          <div class="catalogo-item">
+            <img src="../Impresion/Images/Canica valle.webp" alt="Decoración moderna">
+            <h3>Canicas en Órbita</h3>
+            <p>Entretenimiento</p>
+            <button onclick="openModal('modal4')">Ver más</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Ventanas emergentes -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Dragones</h2>
+      <div class="modal-imagenes">
+        <div class="img-box">
+          <img src="../Impresion/Images/estanteria dragon.webp" alt="Decoración moderna variante">
+          <p>Estanteria de Dragón</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/guardian dragon decoracion estante.webp" alt="Decoración moderna variante">
+          <p>Decoracion Dragón</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/estatua dragon.webp" alt="Decoración moderna variante">
+          <p>Estatua de Dragón</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Angel Del Sueño.webp" alt="Decoración moderna variante">
+          <p>Ángel del Sueño</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Espartano.webp" alt="Decoración moderna variante">
+          <p>Estatua de Guerrero Espartano</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Goku.webp" alt="Decoración moderna variante">
+          <p>Estatua de Goku</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Amor y Psique.webp" alt="Decoración moderna variante">
+          <p>Representacion de Amor y Psique</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Cristo.webp" alt="Decoración moderna variante">
+          <p>Representación de Cristo</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Amor Materno.webp" alt="Decoración moderna variante">
+          <p>Estatua Amor Materno</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Tulipán.webp" alt="Decoración moderna variante">
+          <p>Tulipán</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Flor Goteante.webp" alt="Decoración moderna variante">
+          <p>Flor Goteante</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Creeper.webp" alt="Decoración moderna variante">
+          <p>Creeper</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Estatua de David.webp" alt="Decoración moderna variante">
+          <p>Cabeza de David</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Assasin Creed.webp" alt="Decoración moderna variante">
+          <p>Assasin Creed</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Aguila estatua.webp" alt="Decoración moderna variante">
+          <p>Águila </p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Doom Slayer.webp" alt="Decoración moderna variante">
+          <p>Doom Slayer</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Angel.webp" alt="Decoración moderna variante">
+          <p>Angel</p>
+        </div>
+      </div>
+      <p>Disponibles en varios tamaños y colores.</p>
+    </div>
+  </div>
+
+    <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Macetas</h2>
+      <div class="modal-imagenes">
+        
+        <div class="img-box">
+          <img src="../Impresion/Images/Maceta mano.webp" alt="Adorno artístico variante">
+          <p>Mano de Poder</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Maceta concha.webp" alt="Adorno artístico variante">
+          <p>Caparazón</p>
+        </div>
+        
+        <div class="img-box">
+          <img src="../Impresion/Images/Maceta tierra.webp" alt="Adorno artístico variante">
+          <p>Maceta forma de Tierra</p>
+        </div>
+        
+        <div class="img-box">
+          <img src="../Impresion/Images/Maceta hexagonal.webp" alt="Adorno artístico variante">
+          <p>Maceta Hexagonal</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Maceta Tela.webp" alt="Adorno artístico variante">
+          <p>Maceta forma de Tela</p>
+        </div>
+        
+        
+      </div>
+      <p>Modelos exclusivos de PIXEL3D.</p>
+    </div>
+  </div>
+ 
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Dragones</h2>
+      <div class="modal-imagenes">
+        <div class="img-box">
+          <img src="../Impresion/Images/Dragon lampara.webp" alt="Decoración moderna variante">
+          <p>Lampara de Dragón</p>
+        </div>
+       
+        <div class="img-box">
+          <img src="../Impresion/Images/Linterna dragon.webp" alt="Decoración moderna variante">
+          <p>Lampara de Dragón</p>
+        </div>
+        
+         <div class="img-box">
+          <img src="../Impresion/Images/Dragon lampara 2.webp" alt="Decoración moderna variante">
+          <p>Lampara de Dragón</p>
+        </div>
+
+         <div class="img-box">
+          <img src="../Impresion/Images/Lampara virus.webp" alt="Decoración moderna variante">
+          <p>Lampara Virus</p>
+        </div>
+ 
+         <div class="img-box">
+          <img src="../Impresion/Images/flor de loto.webp" alt="Decoración moderna variante">
+          <p>Flor de Loto</p>
+        </div>
+
+         <div class="img-box">
+          <img src="../Impresion/Images/Lampara té.webp" alt="Decoración moderna variante">
+          <p>Linterna de Té</p>
+        </div>
+
+         <div class="img-box">
+          <img src="../Impresion/Images/Lampara de Corazón.webp" alt="Decoración moderna variante">
+          <p>Linterna de Corazón</p>
+        </div>
+
+         <div class="img-box">
+          <img src="../Impresion/Images/Waste Toxic.webp" alt="Decoración moderna variante">
+          <p>Depósito Tóxico</p>
+        </div>
+
+         <div class="img-box">
+          <img src="../Impresion/Images/Corazón Vela.webp" alt="Decoración moderna variante">
+          <p>Linterna de Corazón</p>
+        </div>
+
+         <div class="img-box">
+          <img src="../Impresion/Images/Aguila Lampara.webp" alt="Decoración moderna variante">
+          <p>Lampara de Águila</p>
+        </div>
+      </div>
+      <p>Disponibles en varios tamaños y colores.</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h2>Canicas en Órbita</h2>
+      <div class="modal-imagenes">
+        <div class="img-box">
+          <img src="../Impresion/Images/Canica valle.webp" alt="Decoración moderna variante">
+          <p>Canica Valle</p>
+        </div>
+       
+        <div class="img-box">
+          <img src="../Impresion/Images/Canica Metropolis.webp" alt="Decoración moderna variante">
+          <p>Canica Metropolis</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Master canica.webp" alt="Decoración moderna variante">
+          <p>Master Canica</p>
+        </div>
+
+        <div class="img-box">
+          <img src="../Impresion/Images/Canicas Pac-Man.webp" alt="Decoración moderna variante">
+          <p>Canica Pac-Man</p>
+        </div>
+        </div>
+      </div>
+      <p>Disponibles en varios tamaños y colores.</p>
+    </div>
+  </div>
+  
+  <script src="main.js"></script>
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.addEventListener("click", function(e) {
+      document.querySelectorAll(".modal").forEach(modal => {
+        if (e.target === modal) modal.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>
