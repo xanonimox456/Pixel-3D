@@ -7,7 +7,7 @@ body {
   color: white;
   
   /* 🔹 Fondo de imagen */
-  background: url("../Impresion/Images/Pixel 3d.jpg") no-repeat center center fixed;
+  background: url("Images/Pixel 3d.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
